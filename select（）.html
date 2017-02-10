@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="" value="请输入内容" />
+		<input type="button" name="" id="btn" value="全选" />
+	</body>
+	<script type="text/javascript">
+		var inp = document.getElementsByTagName('input')[0];
+		var btn = document.getElementById('btn');
+		inp.onfocus = function(){
+			if(this.value === '请输入内容'){
+				this.value = '';
+			}
+			//失去焦点onbluer
+			
+		}
+		inp.onblur = function (){
+			if(this.value == ''){
+				this.value = '请输入内容';
+			}
+		}
+		
+		btn.onclick = function (){
+			inp.select();
+		}
+		
+		
+	</script>
+</html>
